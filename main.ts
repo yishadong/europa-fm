@@ -1,3 +1,6 @@
+scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles0, function (sprite, location) {
+    game.over(true)
+})
 let pihai = sprites.create(img`
     6 6 6 . . . . 6 6 6 . . . . 
     e 1 1 d . . d 1 1 e . . . . 
@@ -139,3 +142,4 @@ scene.setBackgroundImage(img`
     `)
 tiles.setCurrentTilemap(tilemap`level1`)
 scene.cameraFollowSprite(pihai)
+info.startCountdown(30)
